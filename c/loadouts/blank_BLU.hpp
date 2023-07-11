@@ -7,26 +7,26 @@
 // Camo set
 #define CAMO_UNIFORM "UK3CB_CW_US_B_Early_U_JNR_OFFICER_Uniform_01_OLI"
 #define CAMO_VEST "V_TacChestrig_grn_F"
-#define CAMO_BACKPACK "I_AT_01_weapon_F"
+#define CAMO_BACKPACK "B_TacticalPack_oli"
 #define CAMO_HEADGEAR "UK3CB_H_HSAT_PTYPE"
 // Rifle
 #define RIFLE "UK3CB_M16A1"
-#define RIFLE_MAG "rhs_mag_30Rnd_556x45_M855A1_Stanag:10"
+#define RIFLE_MAG "rhs_mag_30Rnd_556x45_M855A1_Stanag:5"
 #define RIFLE_ATTACHMENTS ""
 #define AR_ATTACHMENTS RIFLE_ATTACHMENTS, ""
-#define ALT_OPTICS "optic_Aco",STANAG_OPTICS,WARSAW_OPTICS
+#define ALT_OPTICS 
 // GL Rifle
 #define GLRIFLE "CUP_arifle_M16A1GL"
-#define GLRIFLE_MAG "rhs_mag_30Rnd_556x45_M855A1_Stanag:10"
-#define GLRIFLE_MAG_FLARE "UGL_FlareYellow_F:4"
+#define GLRIFLE_MAG "rhs_mag_30Rnd_556x45_M855A1_Stanag:5"
+#define GLRIFLE_MAG_FLARE "UGL_FlareWhite_F:4"
 #define GLRIFLE_MAG_SMOKE "1Rnd_Smoke_Grenade_shell:6","1Rnd_SmokeRed_Grenade_shell:4","1Rnd_SmokeYellow_Grenade_shell:4",GLRIFLE_MAG_FLARE
-#define GLRIFLE_MAG_HE "1Rnd_HE_Grenade_shell:4"
+#define GLRIFLE_MAG_HE "1Rnd_HE_Grenade_shell:2"
 // Carbine
 #define CARBINE "CUP_smg_UZI"
 #define CARBINE_MAG "CUP_32Rnd_9x19_UZI_M:10"
 // AR
-#define AR "HAFM_M60E4"
-#define AR_MAG "HAFM_M60_762:3"
+#define AR "UK3CB_M60"
+#define AR_MAG "rhsusf_100Rnd_762x51_m62_tracer:5"
 // AT
 #define AT "rhs_weap_m72a7"
 #define AT_MAG ""
@@ -90,13 +90,11 @@ class B_Truck_01_ammo_F {
 };
 
 class Car {
-  TransportWeapons[] = {AT};
-  TransportMagazines[] = {RIFLE_MAG,RIFLE_MAG,CARBINE_MAG,GLRIFLE_MAG,AR_MAG,AR_MAG,GLRIFLE_MAG_HE,GLRIFLE_MAG_SMOKE,GLRIFLE_MAG_SMOKE};
+ 
   TransportItems[] = {BASE_MEDICAL,BASE_MEDICAL,BASE_MEDICAL,BASE_MEDICAL};
 };
 class Tank {
-  TransportWeapons[] = {AT};
-  TransportMagazines[] = {RIFLE_MAG,RIFLE_MAG,CARBINE_MAG,GLRIFLE_MAG,AR_MAG,AR_MAG,GLRIFLE_MAG_HE,GLRIFLE_MAG_SMOKE,GLRIFLE_MAG_SMOKE};
+ 
   TransportItems[] = {BASE_MEDICAL,BASE_MEDICAL,BASE_MEDICAL,BASE_MEDICAL};
 };
 class Helicopter {
@@ -134,7 +132,7 @@ class rifleman {// rifleman
   backpackItems[] = {BASE_MEDICAL};
   weapons[] = {RIFLE};
   magazines[] = {RIFLE_MAG,BASE_GRENADES};
-  items[] = {TOOLS,RADIO_SR};
+  items[] = {TOOLS};
   linkedItems[] = {LINKED};
   attachments[] = {RIFLE_ATTACHMENTS};
   opticChoices[] = {ALT_OPTICS};
@@ -151,20 +149,25 @@ class Fic_Soldier_Carbine: rifleman {// carbine-man
 class ftl: rifleman {// FTL
   weapons[] = {GLRIFLE};
   magazines[] = {GLRIFLE_MAG,GLRIFLE_MAG_HE,GLRIFLE_MAG_SMOKE,LEADER_GRENADES};
-  items[] += {LEADER_TOOLS,RADIO_MR};
+  items[] += {LEADER_TOOLS};
   linkedItems[] += {LEADER_LINKED,BINOS};
 };
 class sl: ftl {// SL
   handguns[] = {PISTOL};
   magazines[] += {PISTOL_MAG};
   linkedItems[] = {LINKED,LEADER_LINKED,RANGE_FINDER};
-  items[] += {RADIO_LR};
 };
 class plt: sl {// Platoon Leader
 };
 class coy: plt {// CO and PL
+
+  items[] += {RADIO_LR};
+
 };
 class xo: coy {// XO
+backpack[] = {"UK3CB_ION_B_B_RadioBag_OLI"};
+  items[] = {RADIO_LR};
+
 };
 class sgt: plt {// Platoon Sergeant
 };
@@ -182,7 +185,6 @@ class fac: coy {// FAC
 class sm: Fic_Soldier_Carbine {// Medic
   magazines[] = {CARBINE_MAG,MEDIC_GRENADES};
   backpackItems[] = {MEDIC_MEDICAL};
-  items[] += {RADIO_MR,RADIO_LR};
 };
 class plm: sm {// Platoon Medic
 };
@@ -377,7 +379,8 @@ class vicl: vicc {// Vehicle Commander
 
 //Support Teams
 class Fic_eng: Fic_Soldier_Carbine { // Base ENG
-  magazines[] = {CARBINE_MAG,CREW_GRENADES};
+  handguns[] = {MINE_DETECTOR};
+  magazines[] = {CARBINE_MAG,CREW_GRENADES,BASE_MINE};
   linkedItems[] = {LINKED,LEADER_LINKED};
   items[] += {BASE_ENG,BASE_MEDICAL};
   backpackItems[] = {};
@@ -404,6 +407,6 @@ class engl: eng {// Logistics Leader
   magazines[] = {GLRIFLE_MAG,GLRIFLE_MAG_HE,GLRIFLE_MAG_SMOKE,LEADER_GRENADES};
   items[] += {LEADER_TOOLS};
   linkedItems[] += {LEADER_LINKED,BINOS};
-  backpackItems[] += {RADIO_MR};
+  backpackItems[] += {RADIO_LR};
 };
 class fallback: rifleman {}; // This means any faction member who doesn't match something will use this loadout

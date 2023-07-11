@@ -3,12 +3,12 @@
 // RADIOS
 #define RADIO_SR "ACRE_PRC343"
 #define RADIO_MR "ACRE_PRC148"
-#define RADIO_LR "ACRE_PRC117F"
+#define RADIO_LR "ACRE_PRC117F:2"
 
 // GEAR
 #define BASE_MEDICAL "ACE_elasticBandage:4","ACE_packingBandage:4","ACE_tourniquet:2","ACE_splint"
 #define MEDIC_MEDICAL "ACE_packingBandage:20","ACE_elasticBandage:20","ACE_splint:8","ACE_tourniquet:6","ACE_bloodIV:5","ACE_morphine:10","ACE_epinephrine:10"
-#define BASE_TOOLS "ACE_MapTools","ACE_CableTie:2","ACE_Fortify","ACE_EntrenchingTool"
+#define BASE_TOOLS "ACE_MapTools","ACE_CableTie:2"
 #define BASE_LEADER_TOOLS 
 #define BASE_LINKED "ItemMap","ItemCompass","ItemWatch"
 #define BASE_LEADER_LINKED 

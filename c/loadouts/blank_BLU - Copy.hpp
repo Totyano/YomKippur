@@ -5,31 +5,31 @@
 // ------------------- PASTE BELOW THIS LINE
 
 // Camo set
-#define CAMO_UNIFORM "UK3CB_B_U_CombatUniform_03_WDL"
-#define CAMO_VEST "PLOT_ARMOR_V_TacChestrig_grn_F"
-#define CAMO_BACKPACK "UK3CB_ARD_O_B_LargePack_RIF_TAN"
-#define CAMO_HEADGEAR "UK3CB_ARD_B_H_SSh68"
+#define CAMO_UNIFORM "UK3CB_CW_US_B_Early_U_JNR_OFFICER_Uniform_01_OLI"
+#define CAMO_VEST "V_TacChestrig_grn_F"
+#define CAMO_BACKPACK "I_AT_01_weapon_F"
+#define CAMO_HEADGEAR "UK3CB_H_HSAT_PTYPE"
 // Rifle
-#define RIFLE "rhs_weap_akm"
-#define RIFLE_MAG "rhs_30Rnd_762x39mm_bakelite:5"
+#define RIFLE "UK3CB_M16A1"
+#define RIFLE_MAG "rhs_mag_30Rnd_556x45_M855A1_Stanag:10"
 #define RIFLE_ATTACHMENTS ""
 #define AR_ATTACHMENTS RIFLE_ATTACHMENTS, ""
-#define ALT_OPTICS 
+#define ALT_OPTICS "optic_Aco",STANAG_OPTICS,WARSAW_OPTICS
 // GL Rifle
-#define GLRIFLE "rhs_weap_akm_gp25"
-#define GLRIFLE_MAG "rhs_30Rnd_762x39mm_bakelite:5"
-#define GLRIFLE_MAG_FLARE "rhs_VG40OP_white:4"
-#define GLRIFLE_MAG_SMOKE "rhs_GRD40_White:6","rhs_GRD40_Red:4","1Rnd_SmokeYellow_Grenade_shell:4",GLRIFLE_MAG_FLARE
-#define GLRIFLE_MAG_HE "rhs_VOG25:2"
+#define GLRIFLE "CUP_arifle_M16A1GL"
+#define GLRIFLE_MAG "rhs_mag_30Rnd_556x45_M855A1_Stanag:10"
+#define GLRIFLE_MAG_FLARE "UGL_FlareYellow_F:4"
+#define GLRIFLE_MAG_SMOKE "1Rnd_Smoke_Grenade_shell:6","1Rnd_SmokeRed_Grenade_shell:4","1Rnd_SmokeYellow_Grenade_shell:4",GLRIFLE_MAG_FLARE
+#define GLRIFLE_MAG_HE "1Rnd_HE_Grenade_shell:4"
 // Carbine
-#define CARBINE "CUP_arifle_AKS"
-#define CARBINE_MAG "CUP_30Rnd_762x39_AK47_M:5"
+#define CARBINE "CUP_smg_UZI"
+#define CARBINE_MAG "CUP_32Rnd_9x19_UZI_M:10"
 // AR
-#define AR "rhs_weap_pkm"
-#define AR_MAG "rhs_100Rnd_762x54mmR:5"
+#define AR "HAFM_M60E4"
+#define AR_MAG "HAFM_M60_762:3"
 // AT
-#define AT "rhs_weap_rpg7"
-#define AT_MAG "rhs_rpg7_PG7VL_mag:2"
+#define AT "rhs_weap_m72a7"
+#define AT_MAG ""
 // MMG
 #define MMG ""
 #define MMG_MAG 
@@ -69,8 +69,8 @@
 #define SMG CARBINE
 #define SMG_MAG CARBINE_MAG
 // Pistol
-#define PISTOL "CUP_hgun_Makarov"
-#define PISTOL_MAG "CUP_8Rnd_9x18_Makarov_M:3"
+#define PISTOL "CUP_hgun_Colt1911"
+#define PISTOL_MAG "CUP_7Rnd_45ACP_1911:3"
 // Grenades
 #define LEADER_GRENADES BASE_FRAG,LEADER_SMOKES,SIDE_CHEM_LIGHT
 // Gear
@@ -83,22 +83,25 @@
 
 // Specialized Resupply Vehicle Loadouts
 // Ammo Truck
-class rhs_gaz66_ammo_msv {
+class B_Truck_01_ammo_F {
 	TransportWeapons[] = {AT,AT,AT};
 	TransportMagazines[] = {RIFLE_MAG,RIFLE_MAG,RIFLE_MAG,RIFLE_MAG,CARBINE_MAG,CARBINE_MAG,GLRIFLE_MAG,GLRIFLE_MAG,AR_MAG,AR_MAG,AR_MAG,AR_MAG,MMG_MAG,MMG_MAG,GLRIFLE_MAG_HE,GLRIFLE_MAG_HE,GLRIFLE_MAG_SMOKE,GLRIFLE_MAG_SMOKE,MAT_MAG,BASE_GRENADES,BASE_GRENADES,BASE_GRENADES,BASE_GRENADES};
 	TransportItems[] = {TOOLKIT};
 };
 
 class Car {
-
+  TransportWeapons[] = {AT};
+  TransportMagazines[] = {RIFLE_MAG,RIFLE_MAG,CARBINE_MAG,GLRIFLE_MAG,AR_MAG,AR_MAG,GLRIFLE_MAG_HE,GLRIFLE_MAG_SMOKE,GLRIFLE_MAG_SMOKE};
   TransportItems[] = {BASE_MEDICAL,BASE_MEDICAL,BASE_MEDICAL,BASE_MEDICAL};
 };
 class Tank {
-
+  TransportWeapons[] = {AT};
+  TransportMagazines[] = {RIFLE_MAG,RIFLE_MAG,CARBINE_MAG,GLRIFLE_MAG,AR_MAG,AR_MAG,GLRIFLE_MAG_HE,GLRIFLE_MAG_SMOKE,GLRIFLE_MAG_SMOKE};
   TransportItems[] = {BASE_MEDICAL,BASE_MEDICAL,BASE_MEDICAL,BASE_MEDICAL};
 };
 class Helicopter {
-
+  TransportMagazines[] = {RIFLE_MAG,RIFLE_MAG,CARBINE_MAG,GLRIFLE_MAG,AR_MAG,AR_MAG,GLRIFLE_MAG_HE,GLRIFLE_MAG_SMOKE,GLRIFLE_MAG_SMOKE};
+  TransportItems[] = {BASE_MEDICAL,BASE_MEDICAL,BASE_MEDICAL,BASE_MEDICAL};
 };
 class Plane {};
 class Ship_F {};
@@ -131,12 +134,12 @@ class rifleman {// rifleman
   backpackItems[] = {BASE_MEDICAL};
   weapons[] = {RIFLE};
   magazines[] = {RIFLE_MAG,BASE_GRENADES};
-  items[] = {TOOLS};
+  items[] = {TOOLS,RADIO_SR};
   linkedItems[] = {LINKED};
   attachments[] = {RIFLE_ATTACHMENTS};
   opticChoices[] = {ALT_OPTICS};
 //  goggles[] = {GOG};
-  face[] = {F_RUS};
+  face[] = {F_USA};
 };
 class Fic_Soldier_Carbine: rifleman {// carbine-man
   weapons[] = {CARBINE};
@@ -148,22 +151,20 @@ class Fic_Soldier_Carbine: rifleman {// carbine-man
 class ftl: rifleman {// FTL
   weapons[] = {GLRIFLE};
   magazines[] = {GLRIFLE_MAG,GLRIFLE_MAG_HE,GLRIFLE_MAG_SMOKE,LEADER_GRENADES};
-  items[] += {LEADER_TOOLS};
+  items[] += {LEADER_TOOLS,RADIO_MR};
   linkedItems[] += {LEADER_LINKED,BINOS};
 };
 class sl: ftl {// SL
   handguns[] = {PISTOL};
   magazines[] += {PISTOL_MAG};
   linkedItems[] = {LINKED,LEADER_LINKED,RANGE_FINDER};
-
+  items[] += {RADIO_LR};
 };
 class plt: sl {// Platoon Leader
 };
 class coy: plt {// CO and PL
-items[] += {RADIO_LR};
 };
 class xo: coy {// XO
-items[] += {RADIO_LR};
 };
 class sgt: plt {// Platoon Sergeant
 };
@@ -181,7 +182,7 @@ class fac: coy {// FAC
 class sm: Fic_Soldier_Carbine {// Medic
   magazines[] = {CARBINE_MAG,MEDIC_GRENADES};
   backpackItems[] = {MEDIC_MEDICAL};
-
+  items[] += {RADIO_MR,RADIO_LR};
 };
 class plm: sm {// Platoon Medic
 };
@@ -338,10 +339,10 @@ class sniper: spotter {// Sniper
 
 // Air
 class pilot {// Pilot
-  uniform[] = {"UK3CB_CW_SOV_O_LATE_U_J_Pilot_Uniform_01_OLI"};
+uniform[] = {"UK3CB_TKA_I_U_J_Pilot_Des"};
   backpack[] = {"B_Battle_Belt_XL_F"};
   vest[] = {"PLOT_ARMOR_V_Pockets_F"};
-  headgear[] = {"H_PilotHelmetHeli_I_E"};
+  headgear[] = {"rhsusf_hgu56p_visor"};
   weapons[] = {SMG};
   magazines[] = {SMG_MAG,CREW_GRENADES};
   backpackItems[] = {SIDE_KEY,RADIO_LR};
@@ -358,9 +359,9 @@ class cc: helicrew {// Crew Chief
 
 //Armor
 class vicc: Fic_Soldier_Carbine {// Crew
- backpack[] = {"B_Battle_Belt_XL_F"};
+backpack[] = {"B_Battle_Belt_XL_F"};
   vest[] = {"PLOT_ARMOR_V_Pockets_F"};
-  headgear[] = {"UK3CB_H_Crew_Cap"};
+  headgear[] = {"H_HelmetCrew_I"};
   magazines[] = {CARBINE_MAG,CREW_GRENADES};
   backpackItems[] = {SIDE_KEY,RADIO_LR,RADIO_MR};
   linkedItems[] = {LINKED,LEADER_LINKED,BINOS};
