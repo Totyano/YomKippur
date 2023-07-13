@@ -8,7 +8,7 @@ class EditorData
 	toggles=1537;
 	class ItemIDProvider
 	{
-		nextID=33672;
+		nextID=33678;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1766;
+		nextID=1833;
 	};
 	class Camera
 	{
-		pos[]={12228.743,176.83897,18620.461};
-		dir[]={-0.71749026,-0.63773555,-0.28028923};
-		up[]={-0.59402382,0.77024126,-0.23205675};
-		aside[]={-0.3638829,-6.1799074e-007,0.93147784};
+		pos[]={13167.361,212.69424,19690.676};
+		dir[]={-0.62980497,-0.77085662,0.095528804};
+		up[]={-0.76213926,0.63700873,0.11560127};
+		aside[]={0.14996469,0,0.98869133};
 	};
 };
 binarizationWanted=0;
@@ -105,13 +105,14 @@ addons[]=
 	"potato_assignGear",
 	"ace_ballistics",
 	"A3_Structures_F_Mil_Flags",
-	"A3_Modules_F_Sites"
+	"A3_Modules_F_Sites",
+	"CUP_CAMisc"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=54;
+		items=55;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -468,6 +469,11 @@ class AddonsMetaData
 			name="ACE3 - Ballistics";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
+		};
+		class Item54
+		{
+			className="CUP_CAMisc";
+			name="CUP_CAMisc";
 		};
 	};
 };
@@ -1098,7 +1104,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=93;
+									items=94;
 									class Item0
 									{
 										class data
@@ -1843,6 +1849,14 @@ class CustomAttributes
 											value="tun_msp_progresbar_time_pack";
 										};
 									};
+									class Item93
+									{
+										class data
+										{
+											singleType="STRING";
+											value="tun_respawn_killjip";
+										};
+									};
 								};
 							};
 						};
@@ -1853,7 +1867,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=93;
+									items=94;
 									class Item0
 									{
 										class data
@@ -4365,6 +4379,33 @@ class CustomAttributes
 											};
 										};
 									};
+									class Item93
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
 								};
 							};
 						};
@@ -4401,7 +4442,7 @@ class Mission
 		wavesForced=1;
 		windForced=1;
 		year=2013;
-		day=28;
+		day=5;
 		hour=6;
 		minute=0;
 		startFogDecay=0.014;
@@ -4409,7 +4450,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=652;
+		items=657;
 		class Item0
 		{
 			dataType="Logic";
@@ -133588,12 +133629,10 @@ class Mission
 		class Item491
 		{
 			dataType="Marker";
-			position[]={12937.148,41.800617,19610.904};
+			position[]={13022.014,40.500332,20004.617};
 			name="beachtarget";
 			type="mil_dot";
-			alpha=0;
 			id=32344;
-			atlOffset=3.8146973e-006;
 		};
 		class Item492
 		{
@@ -136877,6 +136916,111 @@ class Mission
 			description="Once both sectors in objective 3 are captured by opfor this sector will appear for the last battle";
 			id=33671;
 			atlOffset=-0.00045776367;
+		};
+		class Item652
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13099.592,38.967888,20122.16};
+				angles[]={6.2551947,0,6.2738566};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+				dynamicSimulation=1;
+			};
+			id=33672;
+			type="Land_jezekbeton";
+			atlOffset=0.00023269653;
+		};
+		class Item653
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13096.824,38.997086,20124.027};
+				angles[]={0.0039967569,0,6.2738566};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+				dynamicSimulation=1;
+			};
+			id=33673;
+			type="Land_jezekbeton";
+			atlOffset=0.00023269653;
+		};
+		class Item654
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13093.473,38.954277,20126.262};
+				angles[]={0.0039967569,0,0.033319358};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+				dynamicSimulation=1;
+			};
+			id=33674;
+			type="Land_jezekbeton";
+			atlOffset=0.00023269653;
+		};
+		class Item655
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13090.318,38.841167,20128.256};
+				angles[]={0.0039967569,0,0.033319358};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+				dynamicSimulation=1;
+			};
+			id=33675;
+			type="Land_jezekbeton";
+			atlOffset=0.00023269653;
+		};
+		class Item656
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12658.313,51.093227,19875.77};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						isPlayer=1;
+					};
+					id=33677;
+					type="potato_e_rifleman";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=33676;
 		};
 	};
 	class Connections
