@@ -166,7 +166,7 @@ class coy: plt {// CO and PL
 };
 class xo: coy {// XO
 backpack[] = {"UK3CB_ION_B_B_RadioBag_OLI"};
-  items[] = {RADIO_LR};
+  items[] += {RADIO_LR};
 
 };
 class sgt: plt {// Platoon Sergeant
@@ -182,8 +182,7 @@ class fac: coy {// FAC
 
 
 //Medics
-class sm: Fic_Soldier_Carbine {// Medic
-  magazines[] = {CARBINE_MAG,MEDIC_GRENADES};
+class sm: rifleman {// Medic
   backpackItems[] = {MEDIC_MEDICAL};
 };
 class plm: sm {// Platoon Medic
@@ -202,7 +201,7 @@ class aar: rifleman {// AAR
   backpackItems[] += {AR_MAG};
   linkedItems[] += {BINOS};
 };
-class lat: Fic_Soldier_Carbine {// RAT
+class lat: rifleman {// RAT
   magazines[] += {AT_MAG};
   launchers[] = {AT};
 };
@@ -403,8 +402,6 @@ class eng: fic_eng {// Logistics Engineer
   backpackItems[] = {"Toolkit","ACE_EntrenchingTool","ACE_Fortify","ACE_wirecutter"};
 };
 class engl: eng {// Logistics Leader
-  weapons[] = {GLRIFLE};
-  magazines[] = {GLRIFLE_MAG,GLRIFLE_MAG_HE,GLRIFLE_MAG_SMOKE,LEADER_GRENADES};
   items[] += {LEADER_TOOLS};
   linkedItems[] += {LEADER_LINKED,BINOS};
   backpackItems[] += {RADIO_LR};

@@ -87,6 +87,32 @@ publicVariable "CCO_vehs";
 publicVariable "AllowedGroundCrew";
 publicVariable "AllowedAirCrew";
 
+SFP_fnc_giveAmmoTypes =
+{
+	params["_veh","_class"];
+	if (_class isEqualTo "UK3CB_ARD_O_T55") then {
+		_veh removeMagazinesTurret ["UK3CB_OF412_GREEN", [0]];
+		_veh removeMagazinesTurret ["gm_20Rnd_100x695mm_apfsds_t_bm25", [0]];
+		_veh removeMagazinesTurret ["gm_11Rnd_100x695mm_he_of412", [0]];
+		/*for [{ _i = 0 }, { _i < 2 }, { _i = _i + 1 }] do 
+		{
+		_veh addMagazineTurret ["gm_20Rnd_100x695mm_apfsds_t_bm25", [0]];
+
+		}*/
+	};
+	if(_class isEqualTo "UK3CB_CW_US_B_EARLY_M60a1") then {
+
+		_veh removeMagazinesTurret ["UK3CB_20_HE",[0]];
+		_veh removeMagazinesTurret ["CUP_160rnd_TE1_Green_Tracer_30mmAPBC_2a42_m",[0]];
+
+
+	};
+
+	
+	//IM A GOD
+	_veh setVariable ["ace_rearm_scriptedLoadout", true, true];
+};
+
 // Adds a vehicle cost to vehicles defined above
 TNK_fnc_vehicleTicketCost = 
 {

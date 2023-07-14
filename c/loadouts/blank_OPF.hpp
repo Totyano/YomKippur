@@ -25,8 +25,8 @@
 #define CARBINE "CUP_arifle_AKS"
 #define CARBINE_MAG "CUP_30Rnd_762x39_AK47_M:5"
 // AR
-#define AR "rhs_weap_pkm"
-#define AR_MAG "rhs_100Rnd_762x54mmR:5"
+#define AR "CUP_lmg_PKM"
+#define AR_MAG "CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Green_M:3"
 // AT
 #define AT "rhs_weap_rpg7"
 #define AT_MAG "rhs_rpg7_PG7VL_mag:2"
@@ -163,6 +163,7 @@ class coy: plt {// CO and PL
 items[] += {RADIO_LR};
 };
 class xo: coy {// XO
+
 items[] += {RADIO_LR};
 };
 class sgt: plt {// Platoon Sergeant
