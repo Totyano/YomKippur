@@ -1,4 +1,8 @@
+params["_module","_capturingSide","_losingSide"];
 if (!isServer) exitWith{};
+if (_capturingSide isNotEqualTo EAST) exitwith{};
+
+hint str(_capturingSide);
 
 // Disable cap zone
 sector1trig enableSimulationGlobal false;
@@ -8,5 +12,5 @@ sector1trig enableSimulationGlobal false;
 ["dt1","FAILED"] call BIS_fnc_taskSetState;
 
 // Do the task thing for each side
-[WEST, ["at2"], ["Defend OBJ 2", "Defend OBJ 2", ""], getPos sector2trig, "AUTOASSIGNED"] call BIS_fnc_taskCreate;
-[EAST, ["dt2"], ["Attack OBJ 2", "Attack OBJ 2", ""], getPos sector2trig, "AUTOASSIGNED"] call BIS_fnc_taskCreate;
+[WEST, ["dt2"], ["Defend OBJ 2", "Defend OBJ 2", ""], getPos sector2trig, "AUTOASSIGNED"] call BIS_fnc_taskCreate;
+[EAST, ["at2"], ["Attack OBJ 2", "Attack OBJ 2", ""], getPos sector2trig, "AUTOASSIGNED"] call BIS_fnc_taskCreate;
