@@ -13,5 +13,5 @@ publicVariable "bluMaxWaves";
 [WEST, ["at1"], ["Defend OBJ 1", "Defend OBJ 1", ""], getPos sector1trig, "AUTOASSIGNED"] call BIS_fnc_taskCreate;
 [EAST, ["dt1"], ["Attack OBJ 1", "Attack OBJ 1", ""], getPos sector1trig, "AUTOASSIGNED"] call BIS_fnc_taskCreate;
 
-sector3acapped = false;
-sector3bcapped = false;
+sec3acapped = false;
+sec3bcapped = false;
