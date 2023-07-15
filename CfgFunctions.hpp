@@ -18,6 +18,9 @@ class CCE
     {
         class createSideMarkers{};
         class setupRadios{};
-
+        class capturesecone{};
+        class capturesectwo{};
+        class capturesecthree{};
+        class capturesecfour{};
     }
 };
