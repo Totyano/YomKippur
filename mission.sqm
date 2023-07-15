@@ -16,18 +16,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2235;
+		nextID=2302;
 	};
 	class Camera
 	{
-		pos[]={7377.3457,188.35136,17196.305};
-		dir[]={-0.80048549,-0.56521666,0.19938196};
-		up[]={-0.54845971,0.82494247,0.13660832};
-		aside[]={0.24169195,0,0.97035307};
+		pos[]={7372.2397,227.79408,17169.736};
+		dir[]={-0.050836708,-0.49800861,0.86568069};
+		up[]={-0.029195031,0.86717206,0.49715206};
+		aside[]={0.99828011,0,0.058623549};
 	};
 };
 binarizationWanted=0;
-sourceName="cce_YomKippur_v1";
+sourceName="yomkippur";
 addons[]=
 {
 	"A3_Characters_F",
@@ -130421,7 +130421,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[] spawn CCE_fnc_capturesecone";
+							value="call CCE_fnc_capturesecone";
 						};
 					};
 				};
@@ -130668,7 +130668,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[] spawn CCE_fnc_capturesectwo";
+							value="call CCE_fnc_capturesectwo";
 						};
 					};
 				};
@@ -130931,7 +130931,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[sector3trig2] spawn CCE_fnc_capturesecthree;";
+							value="call CCE_fnc_capturesecthree;";
 						};
 					};
 				};
@@ -131193,7 +131193,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[sector3trig1] spawn CCE_fnc_capturesecthree;";
+							value="call CCE_fnc_capturesecthree;";
 						};
 					};
 				};
@@ -131455,7 +131455,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[] spawn CCE_fnc_capturesecfour";
+							value="call CCE_fnc_capturesecfour";
 						};
 					};
 				};
@@ -131533,7 +131533,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="1";
+							value="0";
 						};
 					};
 				};
@@ -137137,13 +137137,13 @@ class Mission
 		class Item652
 		{
 			dataType="Trigger";
-			position[]={11522.029,67.036102,19096.26};
+			position[]={11522.03,67.035759,19096.26};
 			angle=2.3584454;
 			class Attributes
 			{
-				onActivation="[""artytarget2"", ""Sh_82mm_AMOS"", 450, 1111, [5, 30]] spawn BIS_fnc_fireSupportVirtual; " \n "[""artytarget2"", ""Sh_82mm_AMOS"", 450, 1111, [5, 30]] spawn BIS_fnc_fireSupportVirtual; " \n "[""artytarget2"", ""Sh_82mm_AMOS"", 450, 1111, [5, 30]] spawn BIS_fnc_fireSupportVirtual; " \n "";
+				onActivation="[""artytarget2"", ""Sh_82mm_AMOS"", 450, 1111, [5, 60]] spawn BIS_fnc_fireSupportVirtual; " \n "[""artytarget2"", ""Sh_82mm_AMOS"", 450, 1111, [5, 60]] spawn BIS_fnc_fireSupportVirtual; " \n "[""artytarget2"", ""Sh_82mm_AMOS"", 450, 1111, [5, 60]] spawn BIS_fnc_fireSupportVirtual; " \n "";
 				sizeA=417.414;
-				sizeB=692.71204;
+				sizeB=692.71198;
 				activationBy="EAST";
 				isRectangle=1;
 				isServerOnly=1;
@@ -137151,7 +137151,7 @@ class Mission
 			};
 			id=33678;
 			type="EmptyDetectorAreaR50";
-			atlOffset=10.075294;
+			atlOffset=10.074997;
 		};
 		class Item653
 		{
@@ -137187,10 +137187,10 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={11760.6,57.361908,17774.723};
-			angle=3.9346313;
+			angle=3.9346347;
 			class Attributes
 			{
-				onActivation="[""artytarget2_1"", ""Sh_82mm_AMOS"", 450, 9999, [5, 30]] spawn BIS_fnc_fireSupportVirtual; " \n "[""artytarget2_1"", ""Sh_82mm_AMOS"", 450, 1111, [5, 30]] spawn BIS_fnc_fireSupportVirtual; " \n "[""artytarget2_1"", ""Sh_82mm_AMOS"", 450, 1111, [5, 30]] spawn BIS_fnc_fireSupportVirtual; " \n "";
+				onActivation="[""artytarget2_1"", ""Sh_82mm_AMOS"", 450, 9999, [5, 60]] spawn BIS_fnc_fireSupportVirtual; " \n "[""artytarget2_1"", ""Sh_82mm_AMOS"", 450, 1111, [5, 60]] spawn BIS_fnc_fireSupportVirtual; " \n "[""artytarget2_1"", ""Sh_82mm_AMOS"", 450, 1111, [5, 60]] spawn BIS_fnc_fireSupportVirtual; " \n "";
 				sizeA=417.414;
 				sizeB=872.91101;
 				activationBy="EAST";
@@ -137221,10 +137221,10 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={13172.161,35.108448,19231.23};
-			angle=3.9346313;
+			angle=3.9346347;
 			class Attributes
 			{
-				onActivation="[""artytarget1_2"", ""Sh_82mm_AMOS"", 450, 1111, [5, 30]] spawn BIS_fnc_fireSupportVirtual; " \n "[""artytarget1_2"", ""Sh_82mm_AMOS"", 450, 1111, [5, 30]] spawn BIS_fnc_fireSupportVirtual; " \n "[""artytarget1_2"", ""Sh_82mm_AMOS"", 450, 1111, [5, 30]] spawn BIS_fnc_fireSupportVirtual; " \n "";
+				onActivation="[""artytarget1_2"", ""Sh_82mm_AMOS"", 450, 1111, [5, 60]] spawn BIS_fnc_fireSupportVirtual; " \n "[""artytarget1_2"", ""Sh_82mm_AMOS"", 450, 1111, [5, 60]] spawn BIS_fnc_fireSupportVirtual; " \n "[""artytarget1_2"", ""Sh_82mm_AMOS"", 450, 1111, [5, 60]] spawn BIS_fnc_fireSupportVirtual; " \n "";
 				sizeA=417.414;
 				sizeB=749.80902;
 				activationBy="EAST";
@@ -137239,13 +137239,13 @@ class Mission
 		class Item659
 		{
 			dataType="Trigger";
-			position[]={12984.893,54.424873,20525.748};
+			position[]={12984.893,54.424812,20525.748};
 			angle=5.4392648;
 			class Attributes
 			{
-				onActivation="[""artytarget1"", ""Sh_82mm_AMOS"", 450, 1111, [5, 30]] spawn BIS_fnc_fireSupportVirtual; " \n "[""artytarget1"", ""Sh_82mm_AMOS"", 450, 1111, [5, 30]] spawn BIS_fnc_fireSupportVirtual; " \n "[""artytarget1"", ""Sh_82mm_AMOS"", 450, 1111, [5, 30]] spawn BIS_fnc_fireSupportVirtual; ";
-				sizeA=417.41437;
-				sizeB=624.25671;
+				onActivation="[""artytarget1"", ""Sh_82mm_AMOS"", 450, 1111, [5, 60]] spawn BIS_fnc_fireSupportVirtual; " \n "[""artytarget1"", ""Sh_82mm_AMOS"", 450, 1111, [5, 60]] spawn BIS_fnc_fireSupportVirtual; " \n "[""artytarget1"", ""Sh_82mm_AMOS"", 450, 1111, [5, 60]] spawn BIS_fnc_fireSupportVirtual; ";
+				sizeA=417.414;
+				sizeB=624.25702;
 				activationBy="EAST";
 				isRectangle=1;
 				isServerOnly=1;
@@ -137253,7 +137253,7 @@ class Mission
 			};
 			id=33685;
 			type="EmptyDetectorAreaR50";
-			atlOffset=5.3150597;
+			atlOffset=5.3149986;
 		};
 		class Item660
 		{
